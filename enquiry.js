@@ -1,7 +1,10 @@
 /* =============================================================
    enquiry.js — Shared EmailJS submission handler for Infomaths
-   Form HTML is hardcoded in each page; this file handles submit.
    ============================================================= */
+
+var ENQ_SERVICE  = 'service_mu8k2qy';
+var ENQ_TEMPLATE = 'template_fyw3fnh';
+var ENQ_PUBKEY   = 'rTOqOs8eXbQFv-1pI';
 
 function submitEnquiry(btn) {
   var form   = btn.closest('.enquiry-card-body');
@@ -21,17 +24,19 @@ function submitEnquiry(btn) {
 
   btn.disabled    = true;
   btn.textContent = 'Sending…';
+  msg.style.display = 'none';
 
   emailjs.send(
-    'service_mu8k2qy',
-    'template_fyw3fnh',
+    ENQ_SERVICE,
+    ENQ_TEMPLATE,
     {
       from_name:       name,
       course_interest: course || 'Not specified',
       phone_number:    phone,
       page_source:     window.location.pathname,
       to_email:        'infomathstech@gmail.com'
-    }
+    },
+    { publicKey: ENQ_PUBKEY }
   ).then(function() {
     showEnqMsg(msg, 'success', '✓ Thank you! Our counselor will call you shortly.');
     btn.textContent = 'Submitted ✓';
@@ -43,7 +48,8 @@ function submitEnquiry(btn) {
       btn.textContent = 'Submit Your Enquiry';
     }, 5000);
   }, function(error) {
-    showEnqMsg(msg, 'error', '✗ Something went wrong. Please call us directly.');
+    var errMsg = (error && (error.text || error.message)) ? (error.text || error.message) : 'Unknown error';
+    showEnqMsg(msg, 'error', '✗ Failed: ' + errMsg + '. Please call us directly.');
     btn.disabled    = false;
     btn.textContent = 'Submit Your Enquiry';
     console.error('EmailJS error:', error);
