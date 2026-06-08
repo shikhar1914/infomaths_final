@@ -11,6 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('rTOqOs8eXbQFv-1pI');</script>
 </head>
 <body>
 
@@ -157,17 +159,7 @@
         <h3>Bank PO / SSC Enquiry</h3>
       </div>
       <div class="enquiry-card-body">
-        <select id="bank-interest">
-          <option>Bank PO + Clerk (SBI & IBPS)</option>
-          <option>RBI Grade B / RBI Assistant</option>
-          <option>SSC CGL / CHSL Complete Batch</option>
-          <option>Government Exams Combo Program</option>
-        </select>
-        <div class="phone-group">
-          <input type="text" class="phone-code" value="+91" readonly>
-          <input type="tel" placeholder="Your Phone Number" id="bank-phone">
-        </div>
-        <button class="btn-primary" type="button" onclick="alert('Thank you! Our banking tutor will call you shortly.')">Register Now</button>
+        <!-- form injected by enquiry.js -->
       </div>
     </div>
   </div>
@@ -292,22 +284,7 @@
       <button class="modal-close" id="modalClose">&times;</button>
     </div>
     <div class="enquiry-card-body">
-      <select>
-        <option value="" disabled selected>Courses Interested For</option>
-        <option>MCA Entrance</option>
-        <option>Bank PO SSC</option>
-        <option>IIT JAM Maths</option>
-        <option>CSIR NET JRF</option>
-        <option>BCA Subject Classes</option>
-        <option>BSc Subject Classes</option>
-        <option>Campus Placements</option>
-        <option>Internships Training</option>
-      </select>
-      <div class="phone-group">
-        <input type="text" class="phone-code" value="+91" readonly>
-        <input type="tel" placeholder="Your Phone Number">
-      </div>
-      <button class="btn-primary" type="button">Submit Your Enquiry</button>
+      <!-- form injected by enquiry.js -->
     </div>
   </div>
 </div>
@@ -438,5 +415,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 </script>
+<script src="enquiry.js"></script>
 </body>
 </html>
