@@ -296,7 +296,24 @@
       <button class="modal-close" id="modalClose">&times;</button>
     </div>
     <div class="enquiry-card-body">
-      <!-- form injected by enquiry.js -->
+      <input type="text" class="enq-name" placeholder="Your Full Name" autocomplete="name">
+      <select class="enq-course">
+        <option value="" disabled selected>Course Interested In</option>
+        <option>MCA Entrance (NIMCET / CUET PG / MAH CET)</option>
+        <option>IIT JAM Maths</option>
+        <option>CSIR NET JRF</option>
+        <option>Bank PO &amp; SSC CGL</option>
+        <option>BCA Subject Classes</option>
+        <option>BSc Subject Classes</option>
+        <option>Campus Placements</option>
+        <option>Internship &amp; Skill Development</option>
+      </select>
+      <div class="phone-group">
+        <input type="text" class="phone-code" value="+91" readonly>
+        <input type="tel" class="enq-phone" placeholder="Your Phone Number" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/\D/g,'')">
+      </div>
+      <button class="btn-primary" type="button" style="width:100%;border:none;" onclick="submitEnquiry(this)">Submit Your Enquiry</button>
+      <p class="enq-msg" style="margin-top:8px;font-size:0.88rem;display:none;"></p>
     </div>
   </div>
 </div>
