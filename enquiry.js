@@ -29,7 +29,8 @@ function submitEnquiry(btn) {
       from_name:       name,
       course_interest: course || 'Not specified',
       phone_number:    phone,
-      page_source:     window.location.pathname
+      page_source:     window.location.pathname,
+      to_email:        'infomathstech@gmail.com'
     }
   ).then(function() {
     showEnqMsg(msg, 'success', '✓ Thank you! Our counselor will call you shortly.');
