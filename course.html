@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Details — Infomaths Chandigarh</title>
+<meta name="description" content="Detailed course information and enquiry form — Infomaths coaching institute Chandigarh.">
+<link rel="icon" href="https://infomaths.in/assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init({ publicKey: 'rTOqOs8eXbQFv-1pI' });</script>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:hrinfomaths@gmail.com"><i class="fas fa-envelope"></i> hrinfomaths@gmail.com</a>
+      <a href="tel:+919872124534"><i class="fas fa-phone"></i> +91 98721-24534</a>
+      <a href="tel:+919878624534"><i class="fas fa-phone"></i> +91 98786 24534</a>
+    </div>
+    <div class="top-bar-right">
+      <a href="https://www.facebook.com/infomathsindia" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/infomaths.coursedu/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/user/arpana2311" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/company/infomaths-studies-pvt-ltd/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="navbar-logo"><img src="https://infomaths.in/assets/img/logo.png" alt="Infomaths Logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <button>About <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="about.html">About Infomaths</a>
+          <a href="philosophy.html">Our Philosophy</a>
+          <a href="belief.html">Our Belief</a>
+        </div>
+      </li>
+      <li>
+        <button>Courses <i class="fas fa-chevron-down"></i></button>
+        <div class="mega-dropdown">
+          <div class="mega-dropdown-grid">
+            <div class="mega-col">
+              <h4>Entrance Exams</h4>
+              <a href="mca-entrance.html">MCA Entrance</a>
+              <a href="iit-jam.html">IIT JAM Maths</a>
+              <a href="iit-jam.html">CSIR NET JRF</a>
+            </div>
+            <div class="mega-col">
+              <h4>Bank PO / SSC</h4>
+              <a href="bank-po-ssc.html">Bank PO SSC</a>
+            </div>
+            <div class="mega-col">
+              <h4>Academic &amp; Career</h4>
+              <a href="index.html#course-picker-section">BCA Subject Classes</a>
+              <a href="index.html#course-picker-section">B.Sc Subject Classes</a>
+              <a href="index.html#course-picker-section">Campus Placements</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="faculty.html">Faculty</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-partner"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfta4aTvrfxmzZdvdaHgN7rgpQ1io-bcTZj6Pam8XFgsBSezw/viewform" target="_blank">Partner With Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="mca-entrance.html">MCA Entrance</a></li>
+    <li><a href="bank-po-ssc.html">Bank PO SSC</a></li>
+    <li><a href="iit-jam.html">IIT JAM</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<div class="page-hero page-hero-split">
+  <div class="container">
+    <div id="courseHeroText">
+      <h1 id="courseTitle">Loading...</h1>
+      <p id="courseTagline"></p>
+      <div class="hero-pills" id="coursePills"></div>
+    </div>
+    <div class="enquiry-card">
+      <div class="enquiry-card-header">
+        <h3>Enquire Now — Get Expert Guidance</h3>
+      </div>
+      <div class="enquiry-card-body">
+        <input type="text" class="enq-name" placeholder="Your Full Name" autocomplete="name">
+        <select class="enq-course">
+          <option value="" disabled selected>Course Interested In</option>
+          <option>MCA Entrance (NIMCET / CUET PG / MAH CET)</option>
+          <option>IIT JAM Maths</option>
+          <option>CSIR NET JRF</option>
+          <option>Bank PO &amp; SSC CGL</option>
+          <option>BCA Subject Classes</option>
+          <option>BSc Subject Classes</option>
+          <option>Campus Placements</option>
+          <option>Internship &amp; Skill Development</option>
+        </select>
+        <div class="phone-group">
+          <input type="text" class="phone-code" value="+91" readonly>
+          <input type="tel" class="enq-phone" placeholder="Your Phone Number" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/\D/g,'')">
+        </div>
+        <button class="btn-primary" type="button" style="width:100%;border:none;" onclick="submitEnquiry(this)">Submit Your Enquiry</button>
+        <p class="enq-msg" style="margin-top:8px;font-size:0.88rem;display:none;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="index.html">Home</a> <span>/</span>
+    <a href="index.html#course-picker-section">Courses</a> <span>/</span>
+    <span id="breadcrumbTitle">Course Details</span>
+  </div>
+</div>
+
+<!-- COURSE CONTENT -->
+<div class="container" style="padding: 48px 24px;">
+  <div class="contact-grid">
+    <div>
+      <h2 id="courseAboutTitle" style="font-family:'Playfair Display',serif;"></h2>
+      <p id="courseDesc" style="margin-bottom:24px;color:#555;line-height:1.8;"></p>
+      <ul class="about-features" id="courseFeatures"></ul>
+    </div>
+    <div>
+      <h2 style="font-family:'Playfair Display',serif;">Why Choose Infomaths?</h2>
+      <ul class="about-features">
+        <li><span class="check-icon">✓</span><div><strong>25+ Years of Excellence</strong> — Trusted coaching since 1999 with thousands of successful students.</div></li>
+        <li><span class="check-icon">✓</span><div><strong>Expert Faculty</strong> — Learn from experienced educators with deep subject knowledge.</div></li>
+        <li><span class="check-icon">✓</span><div><strong>Comprehensive Study Material</strong> — Structured notes, mock tests, and PYQs for complete preparation.</div></li>
+        <li><span class="check-icon">✓</span><div><strong>Online &amp; Offline Flexibility</strong> — Live classes, recorded sessions, and 24×7 app access on CoursEdu.</div></li>
+        <li><span class="check-icon">✓</span><div><strong>Free Demo Classes</strong> — Try before you enrol. Book a free demo class today.</div></li>
+      </ul>
+      <div style="margin-top:24px;">
+        <a href="contact.html" class="btn-primary">Book Free Demo</a>
+        <a href="faculty.html" class="btn-outline" style="margin-left:12px;">Meet Faculty</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo"><img src="https://infomaths.in/assets/img/infomath-white-logo.png" alt="Infomaths"></div>
+        <p class="footer-tagline">Infomaths – Where Concepts Become Confidence. Premier coaching for competitive exams with a legacy of success. Trusted by Students Since 1999.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/infomathsindia" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/infomaths.coursedu/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/infomaths-studies-pvt-ltd/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/user/arpana2311" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Courses</h4>
+        <a href="mca-entrance.html">MCA Entrance</a>
+        <a href="bank-po-ssc.html">Bank PO SSC</a>
+        <a href="iit-jam.html">IIT JAM Maths</a>
+        <a href="iit-jam.html">CSIR NET JRF</a>
+        <a href="index.html#course-picker-section">BCA Subject Classes</a>
+        <a href="index.html#course-picker-section">Campus Placement</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="faculty.html">Our Faculty</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul class="footer-contact">
+          <li>📍 Quiet Office 10, Second Floor, Sector 35 A, Chandigarh, 160035</li>
+          <li>📞 +91-98721-24534 | +91 98786-24534</li>
+          <li>✉️ hrinfomaths@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">InfoMaths © 2025 | All Rights Reserved.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919872124534" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+  <img src="https://infomaths.in/assets/img/whatsapp.png" alt="WhatsApp">
+</a>
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Enquiry Modal -->
+<div class="enquiry-modal" id="enquiryModal">
+  <div class="enquiry-overlay" id="enquiryOverlay"></div>
+  <div class="enquiry-modal-content">
+    <div class="enquiry-card-header">
+      <h3>Ask your Enquiry — Get expert guidance for your career path</h3>
+      <button class="modal-close" id="modalClose">&times;</button>
+    </div>
+    <div class="enquiry-card-body">
+      <input type="text" class="enq-name" placeholder="Your Full Name" autocomplete="name">
+      <select class="enq-course">
+        <option value="" disabled selected>Course Interested In</option>
+        <option>MCA Entrance (NIMCET / CUET PG / MAH CET)</option>
+        <option>IIT JAM Maths</option>
+        <option>CSIR NET JRF</option>
+        <option>Bank PO &amp; SSC CGL</option>
+        <option>BCA Subject Classes</option>
+        <option>BSc Subject Classes</option>
+        <option>Campus Placements</option>
+        <option>Internship &amp; Skill Development</option>
+      </select>
+      <div class="phone-group">
+        <input type="text" class="phone-code" value="+91" readonly>
+        <input type="tel" class="enq-phone" placeholder="Your Phone Number" inputmode="numeric" pattern="[0-9]*" oninput="this.value=this.value.replace(/\D/g,'')">
+      </div>
+      <button class="btn-primary" type="button" style="width:100%;border:none;" onclick="submitEnquiry(this)">Submit Your Enquiry</button>
+      <p class="enq-msg" style="margin-top:8px;font-size:0.88rem;display:none;"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========================================================
+   COURSE DATA — all courses keyed by slug
+   ======================================================== */
+var COURSES = {
+  /* ---- BCA / BSc ---- */
+  'bca-1': { title: 'BCA 1st Year', tagline: 'Build a strong foundation in programming & computer fundamentals', pills: ['C Language', 'HTML & Web Basics', 'Computer Fundamentals'], about: 'BCA 1st Year at Infomaths', desc: 'Our BCA first-year coaching builds a rock-solid foundation in programming logic, computer organization, and web basics. We cover C language, HTML, discrete mathematics, and digital electronics with concept-first, exam-oriented teaching.', features: ['C Language & Programming Logic', 'HTML, CSS & Web Fundamentals', 'Discrete Mathematics', 'Computer Organization & Architecture', 'Digital Electronics Basics', 'Regular doubt-clearing sessions'] },
+  'bca-2': { title: 'BCA 2nd Year', tagline: 'Master data structures, DBMS, and web development', pills: ['Data Structures', 'DBMS', 'Web Development'], about: 'BCA 2nd Year at Infomaths', desc: 'The BCA second-year program dives deep into core CS subjects. We cover data structures with implementation, database management systems, operating systems, OOP with Java/C++, and full-stack web fundamentals.', features: ['Data Structures & Algorithms', 'DBMS & SQL', 'Operating Systems', 'Object-Oriented Programming (Java / C++)', 'Computer Networks', 'Software Engineering'] },
+  'bca-3': { title: 'BCA 3rd Year', tagline: 'Full-stack development, cloud basics & interview prep', pills: ['Full Stack', 'Cloud Basics', 'Interview Prep'], about: 'BCA 3rd Year at Infomaths', desc: 'The BCA final-year program focuses on industry-ready skills. We cover advanced web development, cloud computing fundamentals, software project management, and intensive campus placement preparation including aptitude, coding, and HR rounds.', features: ['Advanced Web Development (React / Node)', 'Cloud Computing Fundamentals', 'Software Project Management', 'Campus Placement Training', 'Resume Building & Mock Interviews', 'Industry Project Guidance'] },
+  'bsc-1': { title: 'BSc (NM/CS) 1st Year', tagline: 'Computer science basics, maths & programming', pills: ['Programming Basics', 'Mathematics', 'Computer Science'], about: 'BSc 1st Year at Infomaths', desc: 'Our BSc first-year coaching covers mathematical foundations (calculus, algebra, statistics), programming in C/Python, and digital electronics. We ensure every concept is understood deeply before moving to application.', features: ['C Language & Python Basics', 'Calculus & Linear Algebra', 'Statistics & Probability', 'Digital Electronics', 'Computer Fundamentals', 'Lab Practical Support'] },
+  'bsc-2': { title: 'BSc (NM/CS) 2nd Year', tagline: 'Algorithms, OS, networking & databases', pills: ['Algorithms', 'Networking', 'Databases'], about: 'BSc 2nd Year at Infomaths', desc: 'The BSc second-year curriculum covers algorithm design, operating systems, computer networks, and database systems. We provide rich study material and previous year papers for thorough exam preparation.', features: ['Data Structures & Algorithm Design', 'Operating Systems', 'Computer Networks', 'Database Management Systems', 'Numerical Methods', 'PYQ Practice & Mock Tests'] },
+  'bsc-3': { title: 'BSc (NM/CS) 3rd Year', tagline: 'Full-stack projects, career-focused skills & placements', pills: ['Full-Stack', 'Projects', 'Career Skills'], about: 'BSc 3rd Year at Infomaths', desc: 'The final year of BSc coaching at Infomaths is career-focused. We prepare students for competitive exams, campus placements, and higher education entrances like IIT JAM, CUET PG, and NIMCET.', features: ['Advanced Programming & Projects', 'Compiler Design & Theory of Computation', 'Artificial Intelligence Basics', 'Campus Placement Training', 'Higher Education Exam Guidance (IIT JAM / NIMCET)', 'Internship Assistance'] },
+
+  /* ---- Campus Placement ---- */
+  'verbal-interview': { title: 'Verbal Interview Preparation', tagline: 'Communication, HR rounds & Group Discussion skills', pills: ['Communication Skills', 'HR Interview', 'Group Discussion'], about: 'Verbal & HR Round Training', desc: 'Our Verbal Interview training builds confidence and communication skills for HR rounds, group discussions, and personality interviews. Students practice with real company question sets and receive individual feedback from expert trainers.', features: ['English Communication & Grammar', 'HR Interview Techniques', 'Group Discussion Strategies', 'Presentation & Body Language', 'Personality Development', 'Real Company Mock Interviews'] },
+  'technical-round': { title: 'Technical Round Preparation', tagline: 'Coding interviews, DBMS, OS & problem-solving', pills: ['Coding', 'DBMS', 'Problem Solving'], about: 'Technical Interview Training', desc: 'Our technical interview coaching covers data structures, algorithms, database queries, OS concepts, and core programming. Students practice on real coding platforms with timed problem-solving sessions mirroring actual company tests.', features: ['Data Structures & Algorithms', 'SQL & DBMS Queries', 'Operating System Concepts', 'Coding Problem Practice (C++/Java/Python)', 'System Design Basics', 'Company-Specific Question Banks'] },
+  'aptitude-round': { title: 'Aptitude Round Preparation', tagline: 'Quantitative aptitude, logical reasoning & DI', pills: ['Quantitative Aptitude', 'Logical Reasoning', 'Data Interpretation'], about: 'Aptitude & Reasoning Training', desc: 'Our aptitude training uses Vedic math shortcuts and proven strategies to boost speed and accuracy. We cover all major aptitude topics tested by TCS, Infosys, Wipro, Accenture, and other top recruiters.', features: ['Quantitative Aptitude (all chapters)', 'Logical & Verbal Reasoning', 'Data Interpretation & Sufficiency', 'Vedic Math Speed Techniques', '200+ Company-Specific Mock Tests', 'Performance Analysis & Weak Area Targeting'] },
+
+  /* ---- IIT JAM / CSIR ---- */
+  'iit-jam-test': { title: 'IIT JAM Test Series', tagline: 'Mock tests, previous year papers & performance analysis', pills: ['Mock Tests', 'PYQs', 'Performance Analysis'], about: 'IIT JAM Test Series', desc: 'Our IIT JAM test series includes 300+ topic-wise tests, 50+ full-length mocks, and all previous year question papers with detailed solutions. Full performance analytics help identify weak areas and track improvement over time.', features: ['300+ Topic-Wise Practice Tests', '50+ Full-Length CBT Mock Tests', 'All PYQs with Detailed Solutions', 'Rank-Based Performance Analysis', 'All-India Ranking System', 'Accessible 24×7 via CoursEdu App'] },
+  'iit-jam-crash': { title: 'IIT JAM Crash Course', tagline: 'Fast-track prep, shortcuts & last-minute revision', pills: ['Fast-Track', 'Shortcuts', 'Revision'], about: 'IIT JAM Crash Batch', desc: 'Designed for students who need intensive, focused preparation in a short time. Our crash course covers all high-weightage topics, exam-specific shortcuts, and revision strategies to maximize your score before the exam.', features: ['High-Weightage Topic Coverage', 'Vedic Math & Shortcut Techniques', 'Rapid Revision Modules', 'Daily Full-Length Mock Tests', 'Last-Minute Strategy Sessions', 'Direct Access to Expert Faculty'] },
+  'iit-jam-hybrid': { title: 'IIT JAM Hybrid Course', tagline: 'Live online + recorded classes — best of both worlds', pills: ['Live Classes', 'Recorded Sessions', 'Flexible Schedule'], about: 'IIT JAM Hybrid Program', desc: 'Our hybrid course combines the interactivity of live online classes with the flexibility of recorded sessions. Students can attend live classes, ask doubts in real-time, and revisit recorded lectures anytime via CoursEdu.', features: ['Live Interactive Online Classes', 'Recorded Session Library (24×7 Access)', 'Real-Time Doubt Clearing', 'Digital PDF Notes & Assignments', 'Weekly Mock Tests', 'Personal Mentor Support'] },
+  'iit-jam-recorded': { title: 'IIT JAM Recorded Classes', tagline: 'Self-paced learning — study at your own time', pills: ['Self-Paced', '24×7 Access', 'HD Video Lectures'], about: 'IIT JAM Recorded Course', desc: 'Access our complete IIT JAM video lecture library anytime, anywhere on the CoursEdu app. All lectures are delivered by experienced faculty with in-depth concept explanations, solved examples, and exam strategies.', features: ['Complete HD Video Lecture Library', '24×7 Access on CoursEdu App', 'Chapter-Wise & Topic-Wise Organization', 'PDF Notes with Each Lecture', 'Practice Questions After Each Topic', 'Lifetime Access to Recordings'] },
+  'iit-jam-online': { title: 'IIT JAM Live Online Classes', tagline: 'Interactive live sessions from anywhere in India', pills: ['Live Doubt Clearing', 'Interactive', 'Pan-India'], about: 'IIT JAM Live Online Program', desc: 'Join live, interactive online sessions from anywhere. Our IIT JAM live program replicates the classroom experience with real-time Q&A, whiteboard sessions, and daily assignments. Ideal for students outside Chandigarh.', features: ['Daily Live Interactive Sessions', 'Real-Time Doubt Clearing', 'Digital Whiteboard Teaching', 'Recorded Backup for Every Live Class', 'Weekly Assignments & Tests', 'One-on-One Mentoring Sessions'] },
+  'iit-jam-regular': { title: 'IIT JAM Regular Classroom Batch', tagline: 'Structured classroom program at Chandigarh centre', pills: ['Classroom', 'Daily Sessions', 'Expert Faculty'], about: 'IIT JAM Regular Batch', desc: 'Our flagship classroom program in Chandigarh for IIT JAM Mathematics. Daily 3-4 hour sessions with Mr. Sudhir Grover and team. Covers the entire syllabus with deep conceptual training, shortcut techniques, and regular mock tests.', features: ['Daily 3–4 Hour Classroom Sessions', 'Complete Syllabus Coverage', 'Vedic Math & Speed Techniques', '300+ Mock Tests & PYQs', 'Physical Study Booklets (Level 1, 2, 3)', 'Dedicated Doubt-Clearing Hours'] },
+
+  /* ---- Internship ---- */
+  'it-internship': { title: 'IT Internship Training', tagline: 'Programming, web development & real IT projects', pills: ['Web Development', 'Programming', 'Real Projects'], about: 'IT Internship Program', desc: 'Our IT internship training prepares BCA and BSc students for real software industry projects. Students work on actual web and software development projects under expert guidance, building a portfolio that impresses employers.', features: ['Full-Stack Web Development (HTML, CSS, JS, PHP)', 'Python / Java Programming Projects', 'Database Integration (MySQL)', 'Git & Version Control', 'Live Project Development', 'Certificate & Portfolio Building'] },
+  'non-it-internship': { title: 'Non-IT Internship Training', tagline: 'Marketing, HR, finance & operations internship prep', pills: ['Marketing', 'HR', 'Finance'], about: 'Non-IT Internship Program', desc: 'Our Non-IT internship training program equips students with corporate skills in marketing, human resources, finance, and operations. Includes practical assignments, business communication training, and interview preparation.', features: ['Business Communication & Presentation', 'Marketing & Digital Marketing Basics', 'HR Fundamentals & Recruitment Process', 'Finance & Accounting Basics', 'MS Office & Business Tools', 'Mock Corporate Interviews'] },
+  'combo-internship': { title: 'Combo Internship Batch (IT + Non-IT)', tagline: 'All-in-one internship training covering IT and business skills', pills: ['IT + Non-IT', 'Complete Package', 'Dual Certificate'], about: 'Combo Internship Program', desc: 'The combo batch gives students exposure to both IT and non-IT internship domains. Ideal for students who want a broad skill set. Covers programming projects, web development, marketing, HR, and business communication — all in one program.', features: ['IT: Full-Stack Development Project', 'Non-IT: Marketing & HR Fundamentals', 'Business Communication Training', 'Dual Domain Certificate', 'Portfolio & Resume Building', 'Campus Placement Assistance'] },
+
+  /* ---- MCA Entrance exams ---- */
+  'nimcet': { title: 'NIMCET Coaching', tagline: 'India\'s top NIT MCA entrance — get top ranks at NITs', pills: ['Mathematics', 'Logical Reasoning', 'Computer Awareness'], about: 'NIMCET Preparation at Infomaths', desc: 'NIMCET (NIT MCA Common Entrance Test) is the gateway to MCA at NIT Trichy, NIT Allahabad, NIT Warangal and more. Our coaching covers advanced maths (algebra, calculus, probability), logical reasoning, English, and computer fundamentals with a full CBT mock test platform.', features: ['Advanced Mathematics — Algebra, Calculus, Vectors', 'Logical Reasoning & Analytical Thinking', 'English Language & Comprehension', 'Computer Awareness & Fundamentals', '300+ CBT Mock Tests with All-India Ranking', 'PYQ Analysis from 2010 to Date'] },
+  'cuet-pg': { title: 'CUET PG MCA Coaching', tagline: 'Central university MCA entrance — top ranks across India', pills: ['Computer Concepts', 'Mathematical Skills', 'Reasoning'], about: 'CUET PG Coaching at Infomaths', desc: 'CUET PG for MCA opens doors to central universities across India. Our program covers the complete syllabus including computer science concepts, mathematical ability, reasoning, and verbal comprehension. Rich handouts and sample papers included.', features: ['Computer Science & IT Concepts', 'Mathematical Skills & Aptitude', 'Analytical & Logical Reasoning', 'Verbal Ability & English Comprehension', 'University-Specific Sample Papers', 'CBT Practice Platform'] },
+  'vitmee': { title: 'VITMEE (VIT MCA) Coaching', tagline: 'VIT MCA entrance — aptitude, maths & technical prep', pills: ['Aptitude', 'Mathematics', 'Technical Basics'], about: 'VITMEE Preparation at Infomaths', desc: 'VITMEE is a speed-oriented test for VIT\'s prestigious MCA program. Our coaching focuses on quantitative aptitude, mathematical ability, analytical reasoning, and basic computer fundamentals with timed practice to build exam speed.', features: ['Quantitative Aptitude & Mathematics', 'Logical & Analytical Reasoning', 'Computer Science Fundamentals', 'Speed & Accuracy Building Tests', '100+ VITMEE-Pattern Mock Tests', 'VIT Campus Insights & Counselling'] },
+  'pu-mca': { title: 'Panjab University MCA Entrance', tagline: 'PU CET PG coaching — consistent top ranks since 1999', pills: ['Mathematics', 'Computer Science', 'PU Pattern'], about: 'PU MCA Entrance at Infomaths', desc: 'Panjab University MCA entrance is highly competitive. Infomaths has produced AIR-1, 3rd, 5th, 6th rankers at PU consistently. Our coaching covers the exact PU pattern — mathematics, computer basics, reasoning — with intensive PYQ practice.', features: ['PU-Specific Mathematics Coverage', 'Computer Science & Programming Basics', 'Logical Reasoning (PU Pattern)', 'PYQs from 2010 to Present', 'Regular PU Pattern Mock Tests', 'Personal Mentoring by Mr. Sudhir Grover'] },
+  'mahcet': { title: 'MAH MCA CET Coaching', tagline: 'Maharashtra MCA CET — crack top Maharashtra colleges', pills: ['Speed Tests', 'Maths', 'Computer Concepts'], about: 'MAH MCA CET Preparation', desc: 'MAH MCA CET is a speed-oriented test for Maharashtra MCA admissions. Our training focuses on rapid problem-solving, mathematical aptitude, logical reasoning, and computer awareness — all tailored to the Maharashtra CET pattern.', features: ['Mathematics (MAH CET Pattern)', 'Logical & Analytical Reasoning', 'Computer Concepts & Awareness', 'High-Speed Problem-Solving Drills', '50+ MAH CET Pattern Mocks', 'Percentile Improvement Strategy'] },
+
+  /* ---- Bank PO / SSC ---- */
+  'sbi-po': { title: 'SBI PO Coaching', tagline: 'Crack SBI PO Prelims, Mains & Interview', pills: ['Quantitative Aptitude', 'Reasoning', 'English'], about: 'SBI PO Preparation at Infomaths', desc: 'Our SBI PO coaching covers all three stages — Prelims, Mains, and Interview. Expert faculty deliver topic-wise training in quantitative aptitude, reasoning, English, general awareness, and banking/financial awareness with daily practice tests.', features: ['Quantitative Aptitude & Data Analysis', 'Verbal & Logical Reasoning', 'English Language & Comprehension', 'General Awareness & Banking Knowledge', 'Descriptive Writing (Essay & Letter)', 'Full Prelims + Mains Mock Tests'] },
+  'sbi-clerk': { title: 'SBI Clerk Coaching', tagline: 'Complete SBI Clerk Prelims & Mains preparation', pills: ['Aptitude', 'Reasoning', 'English'], about: 'SBI Clerk Preparation', desc: 'Our SBI Clerk program covers both Prelims and Mains comprehensively. Daily practice tests, speed-building drills, and topic-wise sessions ensure you ace all sections — numerical ability, reasoning, English, and general awareness.', features: ['Numerical Ability (Prelims & Mains)', 'Reasoning Ability', 'English Language', 'General / Financial Awareness', 'Computer Aptitude (Mains)', '100+ SBI Clerk Pattern Mock Tests'] },
+  'rbi-grade-b': { title: 'RBI Grade B Officer Coaching', tagline: 'Crack RBI Grade B Phase 1, 2 & Interview', pills: ['Economics', 'Finance', 'General Awareness'], about: 'RBI Grade B Preparation', desc: 'RBI Grade B is one of the most prestigious banking exams. Our coaching covers Phase 1 (General Awareness, English, Quant, Reasoning) and Phase 2 (Economic & Social Issues, English, Finance & Management) with in-depth material and mock tests.', features: ['Economic & Social Issues (ESI)', 'Finance & Management', 'General Awareness & Banking', 'Quantitative Aptitude & Reasoning', 'English (Descriptive + Objective)', 'Phase 1 & Phase 2 Full Mock Tests'] },
+  'ibps-po': { title: 'IBPS PO Coaching', tagline: 'IBPS PO Prelims, Mains & Interview preparation', pills: ['Aptitude', 'Reasoning', 'Banking Awareness'], about: 'IBPS PO Preparation', desc: 'Our IBPS PO coaching is structured for all stages of the selection process. We cover quantitative aptitude, reasoning, English language, banking/financial awareness, and descriptive writing with regular mock tests in CBT format.', features: ['Quantitative Aptitude (all chapters)', 'Reasoning Ability (Puzzle + Syllogism)', 'English Language & Reading Comprehension', 'Banking & Financial Awareness', 'Descriptive Writing (Mains)', '100+ IBPS PO Pattern Mock Tests'] },
+  'ssc-cgl': { title: 'SSC CGL Coaching', tagline: 'Complete SSC CGL Tier 1, 2 & 3 preparation', pills: ['Maths', 'Reasoning', 'General Awareness'], about: 'SSC CGL Preparation at Infomaths', desc: 'Our SSC CGL coaching covers all four tiers with specialized sessions for quantitative aptitude, English, reasoning, and general awareness. Vedic math techniques and speed-building drills are core to our approach for SSC exams.', features: ['Quantitative Aptitude (Tier 1 & 2)', 'English Language & Comprehension', 'General Intelligence & Reasoning', 'General Awareness & Current Affairs', 'Vedic Math Shortcuts for CGL', 'Tier 1 + Tier 2 Full Mock Tests'] },
+  'default': { title: 'Course Details', tagline: 'Expert coaching at Infomaths — Chandigarh', pills: ['Expert Faculty', 'Proven Results', 'Since 1999'], about: 'About This Course', desc: 'Infomaths offers expert coaching for this course with 25+ years of experience, structured study material, and a track record of top results. Contact us to learn more about batch timings, fees, and free demo classes.', features: ['Expert Faculty with Deep Subject Knowledge', 'Structured Study Material & Notes', 'Regular Mock Tests & PYQs', '24×7 Learning via CoursEdu App', 'Free Demo Classes Available', 'Flexible Batch Timings'] }
+};
+
+/* ========================================================
+   LOAD COURSE DATA FROM URL PARAM
+   ======================================================== */
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(window.location.search);
+  var slug   = params.get('course') || 'default';
+  var data   = COURSES[slug] || COURSES['default'];
+
+  // Update page title & meta
+  document.title = data.title + ' — Infomaths Chandigarh';
+
+  // Hero
+  document.getElementById('courseTitle').textContent    = data.title;
+  document.getElementById('courseTagline').textContent  = data.tagline;
+  document.getElementById('breadcrumbTitle').textContent = data.title;
+
+  // Pills
+  var pillsEl = document.getElementById('coursePills');
+  data.pills.forEach(function(p) {
+    var span = document.createElement('span');
+    span.className = 'hero-pill';
+    span.textContent = p;
+    pillsEl.appendChild(span);
+  });
+
+  // Pre-select course in dropdown if it matches
+  var courseSelect = document.querySelector('.enquiry-card .enq-course');
+  if (courseSelect) {
+    for (var i = 0; i < courseSelect.options.length; i++) {
+      if (courseSelect.options[i].text.toLowerCase().includes(data.title.split(' ')[0].toLowerCase())) {
+        courseSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
+
+  // Content section
+  document.getElementById('courseAboutTitle').textContent = data.about;
+  document.getElementById('courseDesc').textContent       = data.desc;
+
+  var featEl = document.getElementById('courseFeatures');
+  data.features.forEach(function(f) {
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="check-icon">✓</span><div>' + f + '</div>';
+    featEl.appendChild(li);
+  });
+
+  /* --- Hamburger --- */
+  var hamburger  = document.getElementById('hamburger');
+  var mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+
+  /* --- Sticky Navbar --- */
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* --- Scroll to Top --- */
+  var scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', function() {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* --- Enquiry Modal --- */
+  var modal    = document.getElementById('enquiryModal');
+  var closeBtn = document.getElementById('modalClose');
+  var overlay  = document.getElementById('enquiryOverlay');
+  function closeModal() { modal.classList.remove('active'); sessionStorage.setItem('enquiryShown', 'true'); }
+  if (!sessionStorage.getItem('enquiryShown')) { setTimeout(function() { modal.classList.add('active'); }, 4000); }
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+});
+
+/* ========================================================
+   ENQUIRY FORM SUBMIT
+   ======================================================== */
+function submitEnquiry(btn) {
+  var form   = btn.closest('.enquiry-card-body');
+  var name   = form.querySelector('.enq-name').value.trim();
+  var course = form.querySelector('.enq-course').value;
+  var phone  = form.querySelector('.enq-phone').value.trim();
+  var msg    = form.querySelector('.enq-msg');
+  if (!name) { showEnqMsg(msg, 'error', 'Please enter your full name.'); return; }
+  if (!phone || phone.length < 10) { showEnqMsg(msg, 'error', 'Please enter a valid 10-digit phone number.'); return; }
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  msg.style.display = 'none';
+  emailjs.send('service_mu8k2qy', 'template_fyw3fnh', {
+    from_name: name,
+    course_interest: course || 'Not specified',
+    phone_number: phone,
+    page_source: window.location.href,
+    to_email: 'infomathstech@gmail.com'
+  }, { publicKey: 'rTOqOs8eXbQFv-1pI' }).then(function() {
+    showEnqMsg(msg, 'success', '✓ Thank you! Our counselor will call you shortly.');
+    btn.textContent = 'Submitted ✓';
+    form.querySelector('.enq-name').value = '';
+    form.querySelector('.enq-phone').value = '';
+    form.querySelector('.enq-course').selectedIndex = 0;
+    setTimeout(function() { btn.disabled = false; btn.textContent = 'Submit Your Enquiry'; }, 5000);
+  }, function(error) {
+    var errMsg = (error && (error.text || error.message)) ? (error.text || error.message) : JSON.stringify(error);
+    showEnqMsg(msg, 'error', '✗ ' + errMsg + '. Please call us directly.');
+    btn.disabled = false;
+    btn.textContent = 'Submit Your Enquiry';
+    console.error('EmailJS error:', error);
+  });
+}
+function showEnqMsg(el, type, text) {
+  el.style.color = type === 'success' ? '#27ae60' : '#c0392b';
+  el.textContent = text;
+  el.style.display = 'block';
+}
+</script>
+</body>
+</html>

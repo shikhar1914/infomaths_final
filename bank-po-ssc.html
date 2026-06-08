@@ -327,6 +327,45 @@
      JAVASCRIPT
      ============================================================ -->
 <script>
+
+/* ---- Enquiry Form Submit ---- */
+function submitEnquiry(btn) {
+  var form   = btn.closest('.enquiry-card-body');
+  var name   = form.querySelector('.enq-name').value.trim();
+  var course = form.querySelector('.enq-course').value;
+  var phone  = form.querySelector('.enq-phone').value.trim();
+  var msg    = form.querySelector('.enq-msg');
+  if (!name) { showEnqMsg(msg, 'error', 'Please enter your full name.'); return; }
+  if (!phone || phone.length < 10) { showEnqMsg(msg, 'error', 'Please enter a valid 10-digit phone number.'); return; }
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  msg.style.display = 'none';
+  emailjs.send('service_mu8k2qy', 'template_fyw3fnh', {
+    from_name: name,
+    course_interest: course || 'Not specified',
+    phone_number: phone,
+    page_source: window.location.pathname,
+    to_email: 'infomathstech@gmail.com'
+  }, { publicKey: 'rTOqOs8eXbQFv-1pI' }).then(function() {
+    showEnqMsg(msg, 'success', '✓ Thank you! Our counselor will call you shortly.');
+    btn.textContent = 'Submitted ✓';
+    form.querySelector('.enq-name').value = '';
+    form.querySelector('.enq-phone').value = '';
+    form.querySelector('.enq-course').selectedIndex = 0;
+    setTimeout(function() { btn.disabled = false; btn.textContent = 'Submit Your Enquiry'; }, 5000);
+  }, function(error) {
+    var errMsg = (error && (error.text || error.message)) ? (error.text || error.message) : JSON.stringify(error);
+    showEnqMsg(msg, 'error', '✗ ' + errMsg + '. Please call us directly.');
+    btn.disabled = false;
+    btn.textContent = 'Submit Your Enquiry';
+    console.error('EmailJS error:', error);
+  });
+}
+function showEnqMsg(el, type, text) {
+  el.style.color = type === 'success' ? '#27ae60' : '#c0392b';
+  el.textContent = text;
+  el.style.display = 'block';
+}
 document.addEventListener('DOMContentLoaded', function() {
 
   /* --- Hamburger Menu --- */
